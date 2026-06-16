@@ -7,40 +7,54 @@
     <meta name="description" content="Learn sprint training from an AI coach. Get personalized workouts, video analysis, and expert tips on biomechanics, nutrition, and recovery to run faster." />
     <link rel="canonical" href="https://sprintfasterai.com/" />
     <style>
+        /* DARK MODE STYLES */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
-        body { background: #f8fafc; color: #0f172a; line-height: 1.7; }
+        body { background: #0f172a; color: #e2e8f0; line-height: 1.7; }
         .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
 
         /* Header */
-        header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding: 1rem 0; border-bottom: 2px solid #e2e8f0; }
-        .logo { font-size: 1.6rem; font-weight: 800; color: #2563eb; }
-        .logo span { color: #0f172a; }
-        .nav a { color: #334155; text-decoration: none; margin-left: 1.5rem; font-weight: 500; }
-        .nav a:hover { color: #2563eb; }
-        .cta-button { background: #2563eb; color: white; padding: 0.7rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block; transition: background 0.2s; border: none; cursor: pointer; }
-        .cta-button:hover { background: #1d4ed8; }
+        header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding: 1rem 0; border-bottom: 2px solid #1e293b; }
+        .logo { font-size: 1.6rem; font-weight: 800; color: #60a5fa; }
+        .logo span { color: #f1f5f9; }
+        .nav a { color: #94a3b8; text-decoration: none; margin-left: 1.5rem; font-weight: 500; }
+        .nav a:hover { color: #60a5fa; }
+        .cta-button { background: #3b82f6; color: #ffffff; padding: 0.7rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block; transition: background 0.2s; border: none; cursor: pointer; }
+        .cta-button:hover { background: #2563eb; }
 
-        /* Main Article Style */
-        article { background: white; padding: 2.5rem; border-radius: 16px; margin: 2rem 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
-        h1 { font-size: 2.6rem; font-weight: 800; line-height: 1.2; margin-bottom: 0.5rem; }
-        .byline { color: #64748b; font-size: 0.95rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem; margin-bottom: 1.5rem; }
-        h2 { font-size: 1.8rem; font-weight: 700; margin: 2rem 0 1rem; }
-        h3 { font-size: 1.3rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
-        p { margin-bottom: 1rem; color: #1e293b; }
+        /* Main Article */
+        article { background: #1e293b; padding: 2.5rem; border-radius: 16px; margin: 2rem 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.3); border: 1px solid #334155; }
+        h1 { font-size: 2.6rem; font-weight: 800; line-height: 1.2; margin-bottom: 0.5rem; color: #f8fafc; }
+        .byline { color: #94a3b8; font-size: 0.95rem; border-bottom: 1px solid #334155; padding-bottom: 1rem; margin-bottom: 1.5rem; }
+        h2 { font-size: 1.8rem; font-weight: 700; margin: 2rem 0 1rem; color: #f1f5f9; }
+        h3 { font-size: 1.3rem; font-weight: 600; margin: 1.5rem 0 0.5rem; color: #e2e8f0; }
+        p { margin-bottom: 1rem; color: #cbd5e1; }
+        a { color: #60a5fa; text-decoration: none; }
+        a:hover { text-decoration: underline; }
         ul, ol { margin: 1rem 0 1.5rem 1.5rem; }
-        li { margin-bottom: 0.5rem; }
-        .highlight-box { background: #eff6ff; padding: 1.5rem; border-radius: 12px; border-left: 5px solid #2563eb; margin: 1.5rem 0; }
-        .highlight-box strong { color: #1d4ed8; }
+        li { margin-bottom: 0.5rem; color: #cbd5e1; }
+        .highlight-box { background: #1e3a5f; padding: 1.5rem; border-radius: 12px; border-left: 5px solid #3b82f6; margin: 1.5rem 0; }
+        .highlight-box strong { color: #93c5fd; }
+
+        /* Related Articles */
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+        .related-card { background: #1e293b; padding: 1.5rem; border-radius: 12px; border: 1px solid #334155; }
+        .related-card h3 { margin-top: 0; font-size: 1.1rem; }
+        .related-card p { font-size: 0.95rem; color: #94a3b8; }
 
         /* FAQ Section */
-        .faq-item { border-bottom: 1px solid #e2e8f0; padding: 1.2rem 0; }
+        .faq-section { background: #1e293b; padding: 2rem; border-radius: 16px; margin: 2rem 0; border: 1px solid #334155; }
+        .faq-item { border-bottom: 1px solid #334155; padding: 1.2rem 0; }
         .faq-item:last-child { border-bottom: none; }
-        .faq-item h3 { margin: 0; font-size: 1.1rem; cursor: default; }
-        .faq-item p { margin: 0.5rem 0 0; color: #475569; }
+        .faq-item h3 { margin: 0; font-size: 1.1rem; color: #e2e8f0; }
+        .faq-item p { margin: 0.5rem 0 0; color: #94a3b8; }
 
         /* Footer */
-        footer { margin-top: 3rem; padding: 2rem 0; border-top: 1px solid #e2e8f0; text-align: center; color: #64748b; }
-        footer a { color: #2563eb; text-decoration: none; }
+        footer { margin-top: 3rem; padding: 2rem 0; border-top: 1px solid #1e293b; text-align: center; color: #64748b; }
+        footer a { color: #60a5fa; text-decoration: none; }
+
+        /* CTA Section */
+        .cta-section { text-align: center; padding: 2rem 0; }
+        .cta-section p { font-size: 1.3rem; margin-bottom: 1rem; color: #f1f5f9; }
     </style>
 </head>
 <body>
@@ -108,28 +122,28 @@
             <p>The <strong>Sprint Faster AI app</strong> provides a comprehensive dashboard to track all these metrics in one place. You can visualize your improvements, identify plateaus, and stay motivated. <a href="https://studio.com/bronson/sprintfasterai">Start tracking your progress today.</a></p>
         </article>
 
-        <!-- BLOG PREVIEW / RELATED ARTICLES -->
+        <!-- RELATED ARTICLES -->
         <section style="margin: 2rem 0;">
-            <h2>Related Articles</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
-                <div style="background: white; padding: 1.5rem; border-radius: 12px; border: 1px solid #e2e8f0;">
-                    <h3 style="font-size: 1.1rem;"><a href="#" style="color: #2563eb; text-decoration: none;">5 Drills to Improve Your Start</a></h3>
-                    <p style="font-size: 0.95rem; color: #475569;">Master the first 10 meters with these explosive drills.</p>
+            <h2 style="color: #f1f5f9;">Related Articles</h2>
+            <div class="related-grid">
+                <div class="related-card">
+                    <h3><a href="#" style="color: #60a5fa; text-decoration: none;">5 Drills to Improve Your Start</a></h3>
+                    <p>Master the first 10 meters with these explosive drills.</p>
                 </div>
-                <div style="background: white; padding: 1.5rem; border-radius: 12px; border: 1px solid #e2e8f0;">
-                    <h3 style="font-size: 1.1rem;"><a href="#" style="color: #2563eb; text-decoration: none;">The Sprinter's Guide to Nutrition</a></h3>
-                    <p style="font-size: 0.95rem; color: #475569;">Fuel your training with the right foods and timing.</p>
+                <div class="related-card">
+                    <h3><a href="#" style="color: #60a5fa; text-decoration: none;">The Sprinter's Guide to Nutrition</a></h3>
+                    <p>Fuel your training with the right foods and timing.</p>
                 </div>
-                <div style="background: white; padding: 1.5rem; border-radius: 12px; border: 1px solid #e2e8f0;">
-                    <h3 style="font-size: 1.1rem;"><a href="#" style="color: #2563eb; text-decoration: none;">Top 5 Recovery Mistakes</a></h3>
-                    <p style="font-size: 0.95rem; color: #475569;">Avoid these common errors to maximize your gains.</p>
+                <div class="related-card">
+                    <h3><a href="#" style="color: #60a5fa; text-decoration: none;">Top 5 Recovery Mistakes</a></h3>
+                    <p>Avoid these common errors to maximize your gains.</p>
                 </div>
             </div>
         </section>
 
-        <!-- FAQ SECTION (Great for Google "People Also Ask") -->
-        <section style="background: white; padding: 2rem; border-radius: 16px; margin: 2rem 0; border: 1px solid #e2e8f0;">
-            <h2>Frequently Asked Questions About Sprint Training</h2>
+        <!-- FAQ SECTION -->
+        <section class="faq-section">
+            <h2 style="color: #f1f5f9;">Frequently Asked Questions About Sprint Training</h2>
             <div class="faq-item">
                 <h3>How can I improve my sprint start?</h3>
                 <p>Focus on a powerful push-off from the blocks, drive your arms aggressively, and keep your body low for the first 10-20 meters. Drills like falling starts and resisted sprints can help.</p>
@@ -149,8 +163,8 @@
         </section>
 
         <!-- Call to Action -->
-        <div style="text-align: center; padding: 2rem 0;">
-            <p style="font-size: 1.3rem; margin-bottom: 1rem;">Ready to take your sprinting to the next level?</p>
+        <div class="cta-section">
+            <p>Ready to take your sprinting to the next level?</p>
             <a href="https://studio.com/bronson/sprintfasterai" class="cta-button" style="font-size: 1.1rem; padding: 0.8rem 3rem;">Get Your Personalized Plan</a>
         </div>
 
